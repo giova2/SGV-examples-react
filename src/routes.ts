@@ -9,6 +9,9 @@ import ForestSnowing from './SVGs/ForestSnowing';
 import BackgroundPattern from './SVGs/BackgroundPattern';
 import Interaction from './SVGs/Interaction';
 import Clock from './SVGs/Clock';
+import React from 'react';
+import CurvyTree from './SVGs/CurvyTree';
+import PathAnimation from './SVGs/PathAnimation';
 
 export enum RoutesEnum{ 
   Basic = 'basic',
@@ -21,7 +24,9 @@ export enum RoutesEnum{
   ForestSnowing = 'forestsnowing',
   BackgroundPattern = 'backgroundpattern',
   Interaction = 'interaction',
-  Clock = 'clock'
+  Clock = 'clock',
+  CurvyTree = 'curvyTree',
+  PathAnimation = 'pathAnimation'
 }
 
 export const BASIC_ROUTE = RoutesEnum.Basic
@@ -35,6 +40,8 @@ export const FORESTSNOWING_ROUTE = RoutesEnum.ForestSnowing
 export const BACKGROUNDPATTERN_ROUTE = RoutesEnum.BackgroundPattern
 export const INTERACTION_ROUTE = RoutesEnum.Interaction
 export const CLOCK_ROUTE = RoutesEnum.Clock
+export const CURVYTREE_ROUTE = RoutesEnum.CurvyTree
+export const PATHANIMATION_ROUTE = RoutesEnum.PathAnimation
 
 export type RoutesObject = {
   [BASIC_ROUTE]: React.FC,
@@ -48,6 +55,8 @@ export type RoutesObject = {
   [BACKGROUNDPATTERN_ROUTE]: React.FC,
   [INTERACTION_ROUTE]: React.FC,
   [CLOCK_ROUTE]: React.FC,
+  [CURVYTREE_ROUTE]: React.FC,
+  [PATHANIMATION_ROUTE]: React.FC
 }
 
 export const routes: RoutesObject = {
@@ -61,5 +70,7 @@ export const routes: RoutesObject = {
   [RoutesEnum.ForestSnowing]: ForestSnowing,
   [RoutesEnum.BackgroundPattern]: BackgroundPattern,
   [RoutesEnum.Interaction]: Interaction,
-  [RoutesEnum.Clock]: Clock
+  [RoutesEnum.Clock]: Clock,
+  [RoutesEnum.CurvyTree]: CurvyTree,
+  [RoutesEnum.PathAnimation]: PathAnimation
 }
